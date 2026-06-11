@@ -3,6 +3,7 @@
  */
 export const Time = {
 	milliseconds: {
+		toHours: 1 / (60 * 60 * 1000),
 		toMinutes: 1 / (60 * 1000),
 		toSeconds: 1 / 1000,
 	},
@@ -11,6 +12,7 @@ export const Time = {
 	},
 	minutes: {
 		toMilliseconds: 60 * 1000,
+		toSeconds: 60,
 	},
 	hours: {
 		toMilliseconds: 60 * 60 * 1000,

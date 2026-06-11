@@ -4,15 +4,14 @@
 		"@n8n/typescript-config/tsconfig.backend.json"
 	],
 	"compilerOptions": {
-		"rootDir": ".",
-		"baseUrl": "src",
+		"lib": ["es2022"],
 		"paths": {
-			"@/*": ["./*"],
-			"@test/*": ["../test/*"]
+			"@/*": ["./src/*"],
+			"@test/*": ["./test/*"]
 		},
-		"tsBuildInfoFile": "dist/typecheck.tsbuildinfo",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
+		"types": ["node", "vitest/globals"],
 		// TODO: remove all options below this line
 		"useUnknownInCatchVariables": false
 	},
@@ -21,6 +20,7 @@
 		{ "path": "../workflow/tsconfig.build.esm.json" },
 		{ "path": "../@n8n/decorators/tsconfig.build.json" },
 		{ "path": "../@n8n/backend-common/tsconfig.build.json" },
+		{ "path": "../@n8n/backend-network/tsconfig.build.json" },
 		{ "path": "../@n8n/config/tsconfig.build.json" },
 		{ "path": "../@n8n/constants/tsconfig.build.json" },
 		{ "path": "../@n8n/di/tsconfig.build.json" },
